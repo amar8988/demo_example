@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Spring-Traditional-Producer
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Amarjeet
+Implementation-Vendor-Id: com.spring.traditional
+Build-Jdk: 1.8.0_151
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/Spring-Traditional-Producer
+Created-By: Maven Integration for Eclipse
+
