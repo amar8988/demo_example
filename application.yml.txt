@@ -1,0 +1,50 @@
+eureka:
+  client:
+    registerWithEureka: false									//register-with-eureka: false
+    fetchRegistry: false										//fetch-registry: false
+  instance:
+    hostname: localhost
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+  
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 4000
+  dashboard:
+    proxy-stream-allow-list: "*"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
+server:
+  port: 8999
+  
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/shabbirdwd53/config-server
+          clone-on-start: true
+    gateway:
+      routes:
+	      filters:
+            - name: CircuitBreaker
+              args:
+                name: USER-SERVICE
+                fallbackuri: forward:/userServiceFallBack
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/user/**
+  zipkin:
+    base-url: http://127.0.0.1:9411/

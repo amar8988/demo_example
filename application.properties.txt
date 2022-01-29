@@ -1,0 +1,111 @@
+api.key=api-key-her
+api_doc_url=http://api.localhost.com
+basic.message=Welcome to in28minutes - Changed
+basic.number=200
+basic.value=true
+debug=true
+endpoints.shutdown.enabled=true
+endpoints.shutdown.sensitive=false
+eureka.client.fetch-registry=false
+eureka.client.register-with-eureka=false
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka/
+eureka.instance.hostname=localhost
+feign.client.default.connectTimeout=1500
+feign.client.default.readTimeout=1500
+hysterix.command.getDetails.circuitBreaker.requestVolumeThreshold=10
+info.app.description=This is my first boot application
+info.app.encoding=UTF-8
+info.app.java.source=1.8
+info.app.java.target=1.8
+info.app.name=Spring Sample Example
+info.app.version=1.0.0
+info.name.of.app=user management application
+logging.file=Application.log
+logging.level.<packageName>=DEBUG														//values are - INFO,ERROR,DEBUG
+logging.level.root=INFO																	//values are - TRACE, INFO, DEBUG, WARN, etc
+logging.pattern.console="%d{yyyy-MM-dd HH:mm:ss} - %msg%m"
+logging.pattern.file="%d{yyyy-MM-dd HH:mm:ss} [%thread]%-5level %logger{36}-%msg%m%"
+#management.endpoint.<id>.cache.time-to-live
+management.endpoint.beans.cache.time-to-live=10s
+management.endpoint.health.show-details=always/never
+#management.endpoint.<id>.enabled
+management.endpoint.info.enabled=true
+management.endpoint.web.base-path=/userApp
+management.endpoints.enabled-by-default=false
+management.endpoints.sensitive=false
+management.endpoints.web.explore.exclude=beans,metrics
+management.endpoints.web.explore.include=health,info
+management.endpoints.web.explore.include=*
+management.health.defaults.enabled=true/false
+management.port: 9001
+management.security.enabled=false
+security.oauth2.client.accessTokenUri=https://www.googleapis.com/oauth2/v3/token
+security.oauth2.client.authenticationScheme=query
+security.oauth2.client.clientAuthenticationScheme=form
+security.oauth2.client.clientId=<CLIENT_ID>
+security.oauth2.client.clientSecret=<client_secret>
+security.oauth2.client.scope=profile email
+security.oauth2.client.tokenName=oauth_token
+security.oauth2.client.userAuthorizationUri=https://accounts.google.com/o/oauth2/auth
+security.oauth2.resource.preferTokenInfo=false
+security.oauth2.resource.userInfoUri=https://www.googleapis.com/userinfo/me
+server.port=8443
+server.sessionTimeout=60
+server.ssl.key-alias=selfsigned
+server.ssl.key-password=changeit
+server.ssl.key-store=classpath:ssl-server.jks
+server.ssl.key-store-provider=SUN
+server.ssl.key-store-type=JKS
+server.tomcat.access-log-enabled=true
+server.tomcat.basedir: target/tomcat
+spring.application.name=movie-catalog-service
+spring.cloud.gateway.routes[0].id=USER-SERVICE													//index starts from 0...
+spring.cloud.gateway.routes[0].uri=lb://USER-SERVICE											//index starts from 0...
+spring.cloud.gateway.routes[0].predicates[0]=Path=/users/**										//index starts from 0...
+spring.config.name=SPRING_CONFIG_NAME
+spring.config.location=SPRING_CONFIG_LOCATION
+spring.data.rest.base-path=api/
+spring.datasource.driver-class-name=org.apache.derby.jdbc.ClientDriver
+spring.datasource.name=users
+spring.datasource.password=derbyuser
+spring.datasource.platform=h2
+spring.datasource.testWhileIdle=true
+spring.datasource.url=jdbc:mysql://localhost/lss34?createDatabaseIfNotExist=true
+spring.datasource.username=derbyuser
+spring.datasource.validationQuery=SELECT 1
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.hibernate.naming-strategy=org.hibernate.cfg.ImprovedNamingStrategy
+spring.jpa.properties.javax.persistence.validation.mode=none
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+spring.jpa.show-sql=true
+spring.ldap.embedded.base-dn=dc=springframework,dc=org
+spring.ldap.embedded.base-dp=dc=springframework,dc=org
+spring.ldap.embedded.ldif=classpath:ldap-data.ldif
+spring.ldap.embedded.port=8389
+spring.mail.host=smtp.gmail.com
+spring.mail.password=TODO
+spring.mail.port=465
+spring.mail.protocol=smtps
+spring.mail.username=TODO
+spring.main.show-banner=false														//depricated, values are- FALSE, TRUE		
+=>spring.main.banner-mode=false														//spring.main.*, values are - TRUE,FALSE
+spring.main.sources=com.acme.config.ExtraConfig
+spring.main.web-environment=false													//depricated, values are- FALSE, TRUE(by default)
+=>spring.main.web-application.type=false
+spring.mvc.view.prefix=/pages/
+spring.mvc.view.suffix=.jsp
+spring.profiles.active=production
+spring.servlet.multipart.enabled=true
+spring.servlet.multipart.max-file-size=300MB
+spring.servlet.multipart.max-file-threshold=1KB
+spring.security.user.name=green
+spring.security.user.password=learner
+spring.thymeleaf.cache: false
+spring.thymeleaf.prefix=classpath:/pages/
+spring.thymeleaf.prefix=.html
+spring.zipkin.base-url=http://127.0.0.1:9411/
+support.email=mazarin.lss.test@gmail.com
+swagger.basePackage=com.traditional.app.controller
+welcome.message=Welcome message from property file Changed! Welcome to ${app.name}
