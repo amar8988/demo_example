@@ -1,0 +1,23 @@
+JUnit 4:
+@Test
+@BeforeClass
+@Before
+@After
+@AfterClass
+@Ignore
+@Category
+
+@Runwith
+@SuiteClasses
+
+JUnit 5:
+@Test
+@BeforeAll
+@BeforeEach
+@AfterEach
+@AfterAll
+@Disabled
+@Tag
+@TestFactory
+@Nested
+@ExtendWith

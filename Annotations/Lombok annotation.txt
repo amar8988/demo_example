@@ -1,0 +1,10 @@
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Slf4j
+@Builder
+@Getter
+@Setter
+@ToString(exclude="course")								//argument not mandatory
+@EqualsAndHashCode
+@RequiredArgsConstructor

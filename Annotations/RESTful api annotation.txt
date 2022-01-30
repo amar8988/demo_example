@@ -1,0 +1,29 @@
+@Path
+@GET
+@POST
+@PUT
+@DELETE
+@Produces
+@Consumes
+@XmlRootElement
+@PathParam
+@QueryParam
+@MatrixParam
+@FormParam
+@FormDataParam
+@HeaderParam
+@CookieParam
+@BeanParam
+@Context
+@XmlTransient
+@Provider
+
+@JsonPropertyOrder			(in jackson)
+@JsonIgnore						"
+@JsonProperty					"
+
+@Expose				(in GSON)
+
+
+
+tools: jersey,

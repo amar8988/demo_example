@@ -1,0 +1,49 @@
+JPA annotation(javax.persistence package):-
+	@Entity(name="valueName")																			//argument not mandatory
+	@Table(name="tableName", schema="value")															//arguments not mandatory
+	@Id
+	@Basic
+	@Column(name="valueName",updatable=true,insertable=true,nullable=false)								//arguments not mandatory
+	@Transient
+	@Temporal
+	@Lob
+	@GeneratedValue(strategy=GenerationType.AUTO,generator="student_sequence")							//arguments not mandatory, values are- AUTO,IDENTITY, SEQUENCE, TABLE
+	@SequenceGenerator(name="student_sequence",sequenceName="student_sequence",initialValue=1,allocationSize=1)
+	@Embedded
+	@Embeddable
+	@AttributeOverride
+	@AttributeOverrides({@AttributeOverride(name="name",column=@Column(name="guardian_name")})			//same argument for all column with a comma
+	@EmbeddedId
+	@ElementCollection
+	@CollectionTable
+	@JoinTable
+	@JoinColumn(name="course_id",referencedColumnName="courseId")
+	@Inheritance
+	@DiscriminatorColumn
+	@DiscriminatorValue
+	@NamedQuery
+	@NamedNativeQuery
+	@Cacheable
+	@OneToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY,mappedBy="course",optional=false)			//arguments not mandatory, cascade values are- ALL,DETACH,MERGE,PERSIST,REFRESH,REMOVE; fetch values are- EAGER,LAZY; optional values are- false,true(by default)
+	@OneToMany(cascade=CascadeType.ALL)																	//arguments not mandatory, cascade values are- ALL,DETACH,MERGE,PERSIST,REFRESH,REMOVE
+	@ManyToOne(cascade=CascadeType.ALL)																	//arguments not mandatory, cascade values are- ALL,DETACH,MERGE,PERSIST,REFRESH,REMOVE
+	@ManyToMany
+	@Query(value="query",nativeQuery=true)																//arguments not mandatory
+	@Transactional
+	@Modifying
+	@Param
+	@Repository
+	@Lock
+	@PersistenceContext
+	@DataJpaTest
+
+Hibernate annotation:-
+	@Type
+	@NotFound
+	@CollectionId
+	@Entity(selectBeforeUpdate=true)
+	@Cache
+	@GenericGenerator
+	@Parameter
+	@Bean
+	

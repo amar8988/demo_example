@@ -1,0 +1,113 @@
+Spring IOC:-
+	@Autowired
+	@Component			(stereotype annotation)
+	@ComponentScan
+	@Qualifier
+	@Service			(stereotype annotation)
+	@Repository						"
+	@Configuration
+	@ConfigurationProperties
+	@Value
+	@Profile
+	@Bean
+	@Required
+	@EnableAspectJAutoProxy
+	@Order
+	@PropertySource
+	@Primary
+	
+*JSR-250 annotation(javax.annotation package):
+	@PostConstruct
+	@PreDestroy
+	@Resource
+
+
+Spring AOP:-
+	@Aspect
+	@Before
+	@PointCut
+	@After
+	@AfterReturning
+	@AfterThrowing
+	@Around
+
+Spring MVC:-
+	@Controller
+	@RequestMapping	(default is get)
+	@GetMapping
+	@PostMapping
+	@PutMapping
+	@DeleteMapping
+	@RequestParam
+	@PathVariable
+	@ModelAttribute
+	@SessionAttribute
+	@ResponseBody
+	@RestController
+	@RequestBody
+	@ControllerAdvice
+	@ExceptionHandler
+	@ResponseStatus
+	
+Spring security:-
+	@EnableWebSecurity
+	@AuthenticationPrincipal
+	@PreAuthorize
+	@EnableGlobalMethodSecurity
+	
+Spring boot:-
+	@SpringBootApplication
+	@EnableAutoConfiguration
+	@Data
+	@AllArgsConstructor
+	@NoArgsConstructor
+	@EnableTransactionManagement
+	@EnableJpaRepository
+	@EnableJpaRepositories
+	@ConfigurationProperties
+	@PostConstruct
+	@Scope
+	@SpringBootTest
+	@LocalServerPort
+	@MockBean
+	@WebMvcTest
+	@RunWith
+	@RepositoryRestResource
+	@EnableSwagger2
+	@Api
+	@ApiOperation
+	@ApiParam
+	@ApiModel
+	@ApiModelProperty
+	@ApiResponses
+	@ApiResponse
+	@Endpoint
+	@ReadOperation
+	@WriteOperation
+	@JsonInclude
+	@DeleteOperation
+	@RestControllerEndpoint
+	@Select
+	@EnableAsync
+	@Async
+	@WebMvcTest
+	@AutoConfigureMockMvc
+	
+Spring cloud:-
+	@EnableZuulProxy
+	@EnableFeignClients
+	@FeignClient
+	@EnableConfigServer
+	
+Microservice:-
+	@EnableEurekaServer
+	@EnableEurekaClient
+	@EnableDiscoveryClient
+	@EnableCircuitBreaker
+	@EnableHystrix
+	@HystrixCommand
+	@HystrixProperty
+	@EnableHystrixDashboard
+	@RefreshScope
+	@LoadBalanced
+	@CircuitBreaker(name="example",fallbackMethod="fallback")
