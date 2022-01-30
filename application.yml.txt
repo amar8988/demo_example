@@ -26,7 +26,7 @@ management:
 server:
   port: 8999
 
-resiliance4j:
+resilience4j:
   circuitbreaker:
     configs:
 	  shared:
