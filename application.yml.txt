@@ -1,7 +1,7 @@
 eureka:
   client:
-    registerWithEureka: false									//register-with-eureka: false
     fetchRegistry: false										//fetch-registry: false
+	registerWithEureka: false									//register-with-eureka: false
   instance:
     hostname: localhost
   server:
@@ -18,10 +18,16 @@ hystrix:
     proxy-stream-allow-list: "*"
 
 management:
+  endpoint:
+    health:
+	  show-details: always
   endpoints:
     web:
       exposure:
         include: hystrix.stream
+  health:
+    circuitbreakers:
+	  enabled: true
 
 server:
   port: 8999
@@ -30,21 +36,31 @@ resilience4j:
   circuitbreaker:
     configs:
 	  shared:
-	    register-health-indicator: true
-		sliding-window-type: COUNT_BASED
-		sliding-window-size: 5
-		failure-rate-threshold: 40
-		slow-call-rate-threshold: 40
-		permitted-number-of-calls-in-half-open-state: 1
-		max-wait-duration-in-half-open-state: 10s
-		wait-duration-in-open-state: 10s
-		slow-call-duration-threshold: 2s
-		writable-stack-trace-enabled: true
 		automatic-transition-from-open-to-half-open-enabled: true
+		failure-rate-threshold: 40
+		max-wait-duration-in-half-open-state: 10s
+		permitted-number-of-calls-in-half-open-state: 1
+		register-health-indicator: true
+		sliding-window-size: 5
+		sliding-window-type: COUNT_BASED
+		slow-call-duration-threshold: 2s
+		slow-call-rate-threshold: 40
+		wait-duration-in-open-state: 10s
+		writable-stack-trace-enabled: true
 	instances:
 	  example:
 	    base-config: shared
-	    
+	  orderService:
+	    automaticTransitionFromOpenToHalfOpenEnabled: true
+		eventConsumerBufferSize: 10
+		failureRateThreshold: 50
+		minimumNumberOfCalls: 5
+		permittedNumberOfCallsInHalfOpenState: 3
+	    registerHealthIndicator: true
+		slidingWindowSize: 10
+		slidingWindowType: COUNT_BASED
+		waitDurationInOpenState: 5s
+
 spring:
   application:
     name: api-gateway
@@ -52,18 +68,18 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/shabbirdwd53/config-server
           clone-on-start: true
+		  uri: https://github.com/shabbirdwd53/config-server
     gateway:
       routes:
 	      filters:
             - name: CircuitBreaker
               args:
-                name: USER-SERVICE
                 fallbackuri: forward:/userServiceFallBack
+				name: USER-SERVICE
         - id: user-service
-          uri: lb://user-service
           predicates:
             - Path=/user/**
+		  uri: lb://user-service
   zipkin:
     base-url: http://127.0.0.1:9411/
