@@ -1,4 +1,4 @@
-api.key=api-key-her
+api.key=api-key-here
 api_doc_url=http://api.localhost.com
 basic.message=Welcome to in28minutes - Changed
 basic.number=200
@@ -107,5 +107,4 @@ spring.thymeleaf.prefix=classpath:/pages/
 spring.thymeleaf.prefix=.html
 spring.zipkin.base-url=http://127.0.0.1:9411/
 support.email=mazarin.lss.test@gmail.com
-swagger.basePackage=com.traditional.app.controller
 welcome.message=Welcome message from property file Changed! Welcome to ${app.name}
