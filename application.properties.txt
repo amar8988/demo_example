@@ -104,7 +104,7 @@ spring.security.user.name=green
 spring.security.user.password=learner
 spring.thymeleaf.cache: false
 spring.thymeleaf.prefix=classpath:/pages/
-spring.thymeleaf.prefix=.html
+spring.thymeleaf.suffix=.html
 spring.zipkin.base-url=http://127.0.0.1:9411/
 support.email=mazarin.lss.test@gmail.com
 welcome.message=Welcome message from property file Changed! Welcome to ${app.name}
