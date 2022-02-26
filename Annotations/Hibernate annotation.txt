@@ -1,6 +1,6 @@
 JPA annotation(javax.persistence package):-
 	@Entity(name="valueName")																			//argument not mandatory
-	@Table(name="tableName", schema="value")															//arguments not mandatory
+	@Table(name="tableName", schema="value")											//arguments not mandatory
 	@Id
 	@Basic
 	@Column(name="valueName",updatable=true,insertable=true,nullable=false)								//arguments not mandatory
@@ -12,7 +12,7 @@ JPA annotation(javax.persistence package):-
 	@Embedded
 	@Embeddable
 	@AttributeOverride
-	@AttributeOverrides({@AttributeOverride(name="name",column=@Column(name="guardian_name")})			//same argument for all column with a comma
+	@AttributeOverrides({@AttributeOverride(name="name",column=@Column(name="guardian_name")})					//same argument for all column with a comma
 	@EmbeddedId
 	@ElementCollection
 	@CollectionTable
@@ -24,11 +24,11 @@ JPA annotation(javax.persistence package):-
 	@NamedQuery
 	@NamedNativeQuery
 	@Cacheable
-	@OneToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY,mappedBy="course",optional=false)			//arguments not mandatory, cascade values are- ALL,DETACH,MERGE,PERSIST,REFRESH,REMOVE; fetch values are- EAGER,LAZY; optional values are- false,true(by default)
+	@OneToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY,mappedBy="course",optional=false)					//arguments not mandatory, cascade values are- ALL,DETACH,MERGE,PERSIST,REFRESH,REMOVE; fetch values are- EAGER,LAZY; optional values are- false,true(by default)
 	@OneToMany(cascade=CascadeType.ALL)																	//arguments not mandatory, cascade values are- ALL,DETACH,MERGE,PERSIST,REFRESH,REMOVE
 	@ManyToOne(cascade=CascadeType.ALL)																	//arguments not mandatory, cascade values are- ALL,DETACH,MERGE,PERSIST,REFRESH,REMOVE
 	@ManyToMany
-	@Query(value="query",nativeQuery=true)										//default is nativeQuery=false
+	@Query(value="query",nativeQuery=true)												//default is nativeQuery=false
 	@Transactional
 	@Modifying
 	@Param
