@@ -25,8 +25,8 @@ JPA annotation(javax.persistence package):-
 	@NamedNativeQuery
 	@Cacheable
 	@OneToOne(cascade=CascadeType.ALL,fetch=FetchType.LAZY,mappedBy="course",optional=false)					//arguments not mandatory, cascade values are- ALL,DETACH,MERGE,PERSIST,REFRESH,REMOVE; fetch values are- EAGER,LAZY; optional values are- false,true(by default)
-	@OneToMany(cascade=CascadeType.ALL)																	//arguments not mandatory, cascade values are- ALL,DETACH,MERGE,PERSIST,REFRESH,REMOVE
-	@ManyToOne(cascade=CascadeType.ALL)																	//arguments not mandatory, cascade values are- ALL,DETACH,MERGE,PERSIST,REFRESH,REMOVE
+	@OneToMany(cascade=CascadeType.ALL)												//arguments not mandatory, cascade values are- ALL,DETACH,MERGE,PERSIST,REFRESH,REMOVE
+	@ManyToOne(cascade=CascadeType.ALL)												//arguments not mandatory, cascade values are- ALL,DETACH,MERGE,PERSIST,REFRESH,REMOVE
 	@ManyToMany
 	@Query(value="query",nativeQuery=true)												//default is nativeQuery=false
 	@Transactional
