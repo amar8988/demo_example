@@ -28,7 +28,7 @@ JPA annotation(javax.persistence package):-
 	@OneToMany(cascade=CascadeType.ALL)																	//arguments not mandatory, cascade values are- ALL,DETACH,MERGE,PERSIST,REFRESH,REMOVE
 	@ManyToOne(cascade=CascadeType.ALL)																	//arguments not mandatory, cascade values are- ALL,DETACH,MERGE,PERSIST,REFRESH,REMOVE
 	@ManyToMany
-	@Query(value="query",nativeQuery=true)																//arguments not mandatory
+	@Query(value="query",nativeQuery=true)										//default is nativeQuery=false
 	@Transactional
 	@Modifying
 	@Param
