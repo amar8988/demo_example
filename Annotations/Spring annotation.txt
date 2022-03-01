@@ -48,6 +48,7 @@ Spring MVC:-
 	@ControllerAdvice
 	@ExceptionHandler
 	@ResponseStatus
+	@EnableWebMvc
 	
 Spring security:-
 	@EnableWebSecurity
