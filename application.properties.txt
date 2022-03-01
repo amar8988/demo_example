@@ -79,6 +79,7 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.hibernate.naming-strategy=org.hibernate.cfg.ImprovedNamingStrategy
 spring.jpa.properties.javax.persistence.validation.mode=none
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+spring.jpa.properties.hibernate.format_sql=true
 spring.jpa.show-sql=true
 spring.ldap.embedded.base-dn=dc=springframework,dc=org
 spring.ldap.embedded.base-dp=dc=springframework,dc=org
